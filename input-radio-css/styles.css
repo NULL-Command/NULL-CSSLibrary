@@ -1,0 +1,80 @@
+/* Radio Option.CSS */
+
+:root {
+    --model-radio-option-width: 500px;
+    --model-btn-width: 40%;
+    --model-btn-height: 150px;
+    --model-btn-model-icon-size: 80px;
+    --main-color: #8373e6;
+}
+
+.model-radio-option {
+    width: var(--model-radio-option-width);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.model-custom-radio-style input {
+    display: none;
+}
+
+.model-btn {
+    margin: 10px;
+    width: var(--model-btn-width);
+    height: var(--model-btn-height);
+    border: 3px solid transparent;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 0 20px #c3c3c367;
+    cursor: pointer;
+}
+
+.model-btn > i {
+    color: #fff;
+    background-color: var(--main-color);
+    font-size: 20px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%) scale(4);
+    border-radius: 50px;
+    padding: 3px;
+    transition: .2s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.model-btn .model-icon {
+    width: var(--model-btn-model-icon-size);
+    height: var(--model-btn-model-icon-size);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.model-btn .model-icon i {
+    color: var(--main-color);
+    line-height: 60px;
+    font-size: 50px;
+}
+
+.model-btn .model-icon h3 {
+    color: var(--main-color);
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.model-custom-radio-style input:checked + .model-btn {
+    border: 3px solid var(--main-color);
+}
+
+.model-custom-radio-style input:checked + .model-btn > i {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+}
+/*  */

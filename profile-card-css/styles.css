@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: "Poppins", system-ui;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-background-color);
+}
+
+/* Responsive Profile Card.CSS */
+:root {
+    --div-image-size: 150px;
+    --img-tag-size: 100%;
+    --div-image-background-color: #4070f4;
+    --body-background-color: #f4f4f4;
+    --max-width-profile-card: 370px;
+    --background-color-profile-card: #fff;
+    --profile-card-border-radius: 24px;
+    --profile-card-padding: 25px;
+    --name-text-size: 22px;
+    --job-text-size: 15px;
+    --social-link-background-color: #4070f4;
+    --social-link-size: 34px;
+    --social-link-text-color: #fff;
+    --subscribe-button-color: #4070f4;
+    --subscribe-button-text-color: #fff;
+    --subscribe-button-hover-color: #0e4bf1;
+}
+
+.profile-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: var(--max-width-profile-card);
+    width: 100%;
+    background-color: var(--background-color-profile-card);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--profile-card-border-radius);
+    padding: var(--profile-card-padding);
+}
+
+.image {
+    position: relative;
+    height: var(--div-image-size);
+    width: var(--div-image-size);
+    border-radius: 50%;
+    background-color: var(--div-image-background-color);
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.image .profile-img {
+    width: var(--img-tag-size);
+    height: var(--img-tag-size);
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+.profile-card .text-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-data .name {
+    font-size: var(--name-text-size);
+    font-weight: 500;
+}
+
+.text-data .job {
+    font-size: var(--job-text-size);
+    font-weight: 400;
+}
+
+.profile-card .media-buttons {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.media-buttons .link {
+    text-decoration: none;
+    margin: 0 8px;
+    border-radius: 50%;
+    display: flex;
+    color: var(--social-link-text-color);
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    height: var(--social-link-size);
+    width: var(--social-link-size);
+    background-color: var(--social-link-background-color);
+}
+
+.profile-card .buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.buttons .button {
+    color: var(--subscribe-button-text-color);
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    border-radius: 24px;
+    margin: 0 10px;
+    padding: 8px 24px;
+    background-color: var(--subscribe-button-color);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.buttons .button:hover {
+    background-color: var(--subscribe-button-hover-color);
+}
+
+.profile-card .analytics {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.analytics .data {
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 0 20px;
+    border-right: 2px solid #e7e7e7;
+}
+
+.data i {
+    font-size: 18px;
+    margin-right: 6px;
+}
+
+.analytics .data:last-child {
+    border-right: none;
+}
+
+.profile-card::before {
+    content: '';
+    position: absolute;
+    height: 36%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #4070f4;
+    border-radius: 24px 24px 0 0;
+}
+/*  */
